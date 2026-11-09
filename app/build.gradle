@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+// تنظيف تلقائي لأي ملفات متبقية من القالب الافتراضي في Klencod IDE لمنع أخطاء الترجمة مثل NotifyJobService.kt
+file("src/main/java/com/apk3rde").deleteDir()
+
 android {
     namespace "com.mangodsl.engine"
     compileSdk 34

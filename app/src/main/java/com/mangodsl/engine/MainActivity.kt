@@ -12,7 +12,6 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.view.setPadding
 
 /**
  * الواجهة الرئيسية لمحرك Mango DSL 2D على أندرويد
@@ -65,7 +64,7 @@ class MainActivity : Activity() {
             textSize = 13.5f
             typeface = Typeface.DEFAULT_BOLD
             gravity = Gravity.CENTER
-            setPadding(12)
+            setPadding(12, 12, 12, 12)
             visibility = View.GONE
         }
         rootLayout.addView(statusBanner)
@@ -347,7 +346,7 @@ class MainActivity : Activity() {
     private fun setupSceneEditor() {
         sceneEditorLayout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(28)
+            setPadding(28, 28, 28, 28)
             setBackgroundColor(Color.parseColor("#14161E"))
         }
     }
@@ -410,7 +409,7 @@ class MainActivity : Activity() {
         selectedEntity?.let { ent ->
             val detailsCard = LinearLayout(this).apply {
                 orientation = LinearLayout.VERTICAL
-                setPadding(24)
+                setPadding(24, 24, 24, 24)
                 background = createRoundedDrawable("#1E202B", 16f)
             }
 
@@ -482,7 +481,7 @@ class MainActivity : Activity() {
     private fun setupCodeEditor() {
         codeEditorLayout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(24)
+            setPadding(24, 24, 24, 24)
             setBackgroundColor(Color.parseColor("#14161E"))
         }
 
@@ -567,7 +566,7 @@ class MainActivity : Activity() {
             typeface = Typeface.MONOSPACE
             gravity = Gravity.TOP or Gravity.START
             setBackgroundColor(Color.parseColor("#181A22"))
-            setPadding(24)
+            setPadding(24, 24, 24, 24)
             layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f)
         }
         codeEditorLayout.addView(codeEditText)
@@ -592,7 +591,7 @@ class MainActivity : Activity() {
     private fun setupAssetManager() {
         assetManagerLayout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(28)
+            setPadding(28, 28, 28, 28)
             setBackgroundColor(Color.parseColor("#14161E"))
         }
 
@@ -660,7 +659,7 @@ class MainActivity : Activity() {
     private fun setupDictionary() {
         dictionaryLayout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(24)
+            setPadding(24, 24, 24, 24)
             setBackgroundColor(Color.parseColor("#14161E"))
         }
 
@@ -683,7 +682,7 @@ class MainActivity : Activity() {
         for (entry in ArabicDictionary.entries) {
             val card = LinearLayout(this).apply {
                 orientation = LinearLayout.VERTICAL
-                setPadding(24)
+                setPadding(24, 24, 24, 24)
                 background = createRoundedDrawable("#1E202B", 16f)
 
                 val header = LinearLayout(context).apply {

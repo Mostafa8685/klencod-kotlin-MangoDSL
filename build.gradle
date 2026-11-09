@@ -5,10 +5,6 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.9.20' apply false
 }
 
-subprojects {
-    project.evaluationDependsOn(":app")
-}
-
 tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    delete rootProject.layout.buildDirectory
 }
